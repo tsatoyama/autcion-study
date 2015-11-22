@@ -53,5 +53,8 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-  get '/items/:id' => 'items#show'
+  get '/items/new' => 'items#new'      # 新規作成画面
+  get '/items/:id' => 'items#show'     # 商品情報の詳細表示
+  get '/items'  => 'items#index'       # indexページへのアクセス（商品一覧）
+  post '/items'  => 'items#create'     # 商品情報の新規登録処理
 end

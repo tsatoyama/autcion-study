@@ -1,0 +1,6 @@
+<h1>出品商品一覧</h1>
+
+<% # eachメソッドはHTML出力しないため <% で囲む。中身のデータは出力するので<%= で囲む %>
+<% @items.each do |item| %>
+    <li><a href="/items/<%= item.id %>"><%= item.name %></a></li>
+<% end %>
